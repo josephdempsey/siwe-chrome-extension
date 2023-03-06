@@ -89,10 +89,8 @@ const Provider = React.memo(({ children }) => {
             if (accounts && chainId) {
                 setAppLoading(true);
                 const account = getNormalizeAddress(accounts);
-                // const web3 = new Web3(provider);
                 setAccount(account);
                 setChainId(chainId);
-                // setWeb3(web3);
                 setAuthenticated(true);
                 storage.set('metamask-connected', { connected: true });
                 subscribeToEvents(provider)
@@ -111,7 +109,6 @@ const Provider = React.memo(({ children }) => {
             setAccount(null);
             setChainId(null);
             setAuthenticated(false);
-            // setWeb3(null);
         } catch (e) {
             console.log(e);
         }
