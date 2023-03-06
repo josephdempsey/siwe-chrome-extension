@@ -1,0 +1,22 @@
+{
+  "name": "Ethereum Sign-In with Next.js Chrome Extension",
+  "description": "Ethereum Sign-In with Next.js Chrome Extension starter",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Next.js app",
+    "default_popup": "index.html"
+  },
+  "permissions": ["cookies", "http://localhost:3000/", "http://localhost:3001/", "http://localhost:3001/", "activeTab", "storage", "identity", "scripting"],
+  "host_permissions": [
+    "http://localhost:3000/",
+    "http://localhost:3001/",
+    "http://localhost:8080/"
+  ],
+  "externally_connectable": {
+    "matches": [
+      "http://localhost:3000/*",
+      "http://localhost:3001/*"
+    ]
+  }
+}
